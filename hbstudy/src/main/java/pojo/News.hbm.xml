@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="pojo">
+    <class name="News" table="news">
+        <!-- 如果是Model类和表名一样，则table属性可以省略 -->
+        <id name="id" column="id"></id>
+        <!-- 指定数据库主键， name指定Model类中的属性，column属性指定表中的列。如果是Model类属性和列名一样，则column属性可以省略 -->
+        <property name="title" column="title"></property><!-- 指定其他属性 -->
+        <property name="content" column="content"></property>
+        <property name="createDate" column="create_date"></property>
+        <property name="writer" column="writer"></property>
+    </class>
+</hibernate-mapping>
